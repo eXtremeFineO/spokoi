@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заброшенный мир MixVictoria</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-text">Загрузка мира...</div>
+        <div class="progress-bar">
+            <div class="progress" id="progressBar"></div>
+        </div>
+    </div>
+    
+    <button class="start-button" id="startButton">Войти в мир</button>
+    
+    <div id="game-container">
+        <canvas id="background"></canvas>
+        <canvas id="rain-layer"></canvas>
+        <canvas id="lightning-layer"></canvas>
+        <canvas id="foreground"></canvas>
+        
+        <div class="dialog-box" id="dialog">
+            Привет... я ждал тебя. Этот дождь идет вечность, и наконец-то появился кто-то настоящий. Ты слышишь эти звуки в далеком эфире?
+        </div>
+        
+        <div class="avatar-frame" id="avatarFrame">
+            <img id="avatarImage" src="default_avatar.png" alt="Avatar">
+            <div class="username">MixVictoria</div>
+        </div>
+        
+        <div class="controls" id="controls">
+            <button id="soundToggle">Звук: Вкл</button>
+            <button id="lightningBtn">Молния</button>
+            <button id="msgBtn">Сообщение</button>
+            <label for="avatarUpload" class="file-upload-btn">Сменить аватар</label>
+            <input type="file" id="avatarUpload" accept="image/*" style="display: none;">
+            <label for="musicUpload" class="file-upload-btn">Сменить музыку</label>
+            <input type="file" id="musicUpload" accept="audio/*" style="display: none;">
+        </div>
+        
+        <div class="message" id="message"></div>
+        <div class="music-credit">Музыка: "Longing" by Shiru</div>
+    </div>
+
+    <audio id="rainSound" loop>
+        <source src="rain.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="thunderSound">
+        <source src="thunder.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="ambientSound" loop>
+        <source src="ambient.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
